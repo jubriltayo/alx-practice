@@ -19,3 +19,20 @@ void puts_half(char *str)
 	_putchar('\n');
 	
 }
+
+OR
+
+void puts_half(char *str)
+{
+    int i, half;
+    while (str[i] != '\0')
+        i++;
+
+    half = i / 2;
+
+    for (i = half, str[i]; str[i] != '\0'; i++)
+    {
+        _putchar(str[i]);
+    }
+
+}

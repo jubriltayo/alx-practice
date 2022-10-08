@@ -8,3 +8,18 @@ int _strlen(char *s)
       count++;
       
   return count;
+}
+
+OR
+
+int _strlen(char *s)
+{
+    int i;
+
+    while (s[i] != '\0')
+    {
+        s[i];
+        i++;
+    }
+    return (i);
+}

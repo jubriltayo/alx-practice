@@ -13,3 +13,18 @@ void print_array(int *a, int n)
 	}
 	printf("\n");
 }
+
+OR
+
+void print_array(int *a, int n)
+{
+    int i = 0;
+
+    while (a[i] < a[n])
+    {
+        printf("%d", a[i]);
+        if (i != (n - 1))
+            printf(", ");
+        i++;
+    }
+}

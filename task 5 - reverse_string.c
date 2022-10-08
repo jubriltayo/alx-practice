@@ -13,3 +13,28 @@ void rev_string(char *s)
 		s[l] = s[l - 1 - i];
 		s[l - 1 - i] = ch;
 	}
+}
+
+OR
+
+void rev_string(char *s)
+{
+    char *rev;
+    char tmp;
+
+    rev = s;
+
+    while (*(rev + 1) != '\0')
+    {
+        rev = rev + 1;
+    }
+    while (s < rev)
+    {
+        tmp = *s;
+        *s = *rev;
+        *rev = tmp;
+
+        s++;
+        rev--;
+    }
+}

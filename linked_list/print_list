@@ -1,5 +1,7 @@
 #include "lists.h"
 
+/* Prints all the content in the linked list */
+
 size_t print_list(const list_t *h)
 {
     const list_t *temp;

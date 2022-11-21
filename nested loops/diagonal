@@ -1,0 +1,14 @@
+void print_diagonal(int n)
+{
+    int i, j, space;
+    for (i = 1; i <= n; i++)
+    {
+        for (space = 1; space <= i-1; space++)
+            putchar(' ');
+        for (j = 1; j <= 1; j++)
+        {
+            putchar('\\');
+            putchar('\n');
+        }
+    }
+}

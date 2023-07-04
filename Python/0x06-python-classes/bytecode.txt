@@ -1,0 +1,45 @@
+Disassembly of __init__:
+  5           0 LOAD_GLOBAL              0 (type)
+              2 LOAD_FAST                1 (radius)
+              4 CALL_FUNCTION            1
+              6 LOAD_GLOBAL              1 (int)
+              8 COMPARE_OP               3 (!=)
+             10 POP_JUMP_IF_TRUE        12 (to 24)
+             12 LOAD_GLOBAL              0 (type)
+             14 LOAD_FAST                1 (radius)
+             16 CALL_FUNCTION            1
+             18 LOAD_GLOBAL              2 (float)
+             20 COMPARE_OP               3 (!=)
+             22 POP_JUMP_IF_FALSE       16 (to 32)
+
+  6     >>   24 LOAD_GLOBAL              3 (TypeError)
+             26 LOAD_CONST               1 ('radius must be a number')
+             28 CALL_FUNCTION            1
+             30 RAISE_VARARGS            1
+
+  7     >>   32 LOAD_FAST                1 (radius)
+             34 LOAD_FAST                0 (self)
+             36 STORE_ATTR               4 (radius)
+             38 LOAD_CONST               0 (None)
+             40 RETURN_VALUE
+
+Disassembly of area:
+ 10           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (radius)
+              4 LOAD_CONST               1 (2)
+              6 BINARY_POWER
+              8 LOAD_GLOBAL              1 (math)
+             10 LOAD_ATTR                2 (pi)
+             12 BINARY_MULTIPLY
+             14 RETURN_VALUE
+
+Disassembly of circumference:
+ 13           0 LOAD_CONST               1 (2)
+              2 LOAD_GLOBAL              0 (math)
+              4 LOAD_ATTR                1 (pi)
+              6 BINARY_MULTIPLY
+              8 LOAD_FAST                0 (self)
+             10 LOAD_ATTR                2 (radius)
+             12 BINARY_MULTIPLY
+             14 RETURN_VALUE
+
